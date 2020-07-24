@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+  <html
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+  <head>
+      <title>ホーム</title>
+  </head>
+  <body>
+      <div layout:fragment="content">
+        <form th:action="@{/confirm}" method="post" th:object="${form}">
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color:red"></span>
+            <div layout:replace="~{common/text::text}"></div>
+            <div layout:replace="~{common/select::select}"></div>
+            <div layout:replace="~{common/radio::radio}"></div>
+            <div layout:replace="~{common/textbox::textbox}"></div>
+            <input type="submit" name="commit" value="commit"></input>
+        </form>
+      </div>
+  </body>
+  </html>

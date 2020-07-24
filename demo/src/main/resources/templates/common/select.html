@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+  <html xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:th="http://www.thymeleaf.org"
+          xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <body>
+      <div id="select" layout:fragment="select">
+            <select>
+            <option th:each="p:*{persons}" th:value="${p.id}" th:selected="${p.id == id}">[[${p.name}]]</option>
+            </select>
+      </div>
+  </body>
+  </html>
