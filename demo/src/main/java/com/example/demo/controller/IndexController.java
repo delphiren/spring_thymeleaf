@@ -19,7 +19,7 @@ public class IndexController {
 
         Person person = new Person();
         person.setId(1);
-        person.setName("りさん");
+        person.setName("りさん11");
         lists.add(person);
 
         Person person2 = new Person();

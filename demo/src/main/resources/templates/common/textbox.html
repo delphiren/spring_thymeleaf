@@ -4,7 +4,7 @@
           xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
   <body>
       <div id="textbox" layout:fragment="textbox">
-            <input type="text" th:field="*{name}" />
+            <h1 th:text="#{title.name}"></h1><input type="text" th:field="*{name}" />
       </div>
   </body>
   </html>
